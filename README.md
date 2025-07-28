@@ -17,7 +17,7 @@ Lets see how RX works. It's a superheterodyne receiver with an internal AGC and 
 
 ![Superhet scheme](https://www.eeeguide.com/wp-content/uploads/2018/11/Superheterodyne-Receiver.jpg)
 
-RX is super sensitivie so this seems like good news. But bad news following immediately: module turs off an AGC when input signal is missing or too weak to recipee. Thus we have fluctuation noise on data pin when transmitter is absent or turned off. What we gonna do next? Of course, we gonna put bandpass filter to attenuate unwanted noise. It can be done with a classic opamp BPF, but NE567 works way better than the Butterworth or Chebyshev 3rd order BPF and much simpler with 2-3 additional components.
+RX is super sensitivie so this seems like good news. But bad news following immediately: module turs off an AGC when input signal is missing or too weak to recipe. Thus we have fluctuation noise on data pin when transmitter is absent or turned off. What we gonna do next? Of course, we gonna put bandpass filter to attenuate unwanted noise. It can be done with a classic opamp BPF, but NE567 works way better than the Butterworth or Chebyshev 3rd order BPF and much simpler with 2-3 additional components.
 
 VT1, VT2 and VT3 operate like an electronic relay, VT4 is a signal invertor, so when CW key is ON, the TX connected and RX is disconnected from power rail (-) and vice versa. R5 and R6 used to tune up NE567. I highly recommend to use different values of R2C5 for two transceivers.
 HL1 connected in the opposite way lit up by HA1 self-induction. All components soldered on 50x55mm PCB.
